@@ -6,13 +6,13 @@ nms_threshold = 0.2
 
  
 classNames= []
-classFile = '/home/pi/Object-detection/coco.names'
+classFile = '/home/pi/My-Object-Detection/coco.names'
 with open(classFile,'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
  
 #print(classNames)
-configPath = '/home/pi/Object-detection/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
-weightsPath = '/home/pi/Object-detection/frozen_inference_graph.pb'
+configPath = '/home/pi/My-Object-Detection/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
+weightsPath = '/home/pi/My-Object-Detection/frozen_inference_graph.pb'
  
 net = cv2.dnn_DetectionModel(weightsPath,configPath)
 net.setInputSize(320,320)
